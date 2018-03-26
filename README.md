@@ -1,14 +1,14 @@
-* hello-web
+# hello-web
+
+## Benchmarking
 
 ```sh-session
-$ hey -cpus 2 -c 10 -n 100000 -H 'Accept-Encoding: gzip, deflate' http://localhost:4567/
-$ hey -cpus 2 -c 10 -n 100000 -H 'Accept-Encoding: gzip, deflate' http://localhost:8000/
-$ hey -cpus 2 -c 10 -n 100000 -H 'Accept-Encoding: gzip, deflate' http://127.0.0.1:3000/
+$ hey -cpus 2 -c 10 -n 100000 -H 'Accept-Encoding: gzip, deflate' http://localhost:4567/ # Ruby/Sinatra
+$ hey -cpus 2 -c 10 -n 100000 -H 'Accept-Encoding: gzip, deflate' http://localhost:8000/ # Go
+$ hey -cpus 2 -c 10 -n 100000 -H 'Accept-Encoding: gzip, deflate' http://127.0.0.1:3000/ # Haskell/Scotty
 ```
 
-* Benchmark results
-
-** Ruby
+### Ruby
 
 ```
 Summary:
@@ -22,7 +22,7 @@ Summary:
   Size/request:	12 bytes
 ```
 
-* Go
+### Go
 
 ```
 Summary:
@@ -36,7 +36,7 @@ Summary:
   Size/request:	13 bytes
 ```
 
-* Haskell
+### Haskell
 
 ```
 Summary:
