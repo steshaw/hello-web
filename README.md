@@ -1,5 +1,13 @@
 # hello-web
 
+## Building
+
+Use the `build` script:
+
+```sh-session
+$ ./build
+```
+
 ## Benchmarking
 
 ```sh-session
