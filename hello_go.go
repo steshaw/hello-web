@@ -19,11 +19,11 @@ Install Go:
 
 $ brew install go
 
-Build with:
+Build:
 
 $ go build hello_go.go
 
-run with:
+Run:
 
 $ ./hello_go
 */

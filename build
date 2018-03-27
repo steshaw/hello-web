@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Set up Ruby.
+brew install rbenv
+rbenv install --skip-existing
+gem install bundler
+bundle install
+
+# Build Go[lang].
+brew install go
+go build hello_go.go
+
+# Build Haskell.
+brew install haskell-stack
+stack exec --package scotty -- ghc --make hello_hs.hs

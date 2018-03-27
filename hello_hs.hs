@@ -13,13 +13,13 @@ Install Haskell Stack:
 
 $ brew install haskell-stack
 
-Compile with:
+Build:
 
 $ stack exec --package scotty -- ghc --make hello_hs.hs
 [1 of 1] Compiling Main             ( hello_hs.hs, hello_hs.o )
 Linking hello_hs ...
 
-Run with:
+Run:
 
 $ ./hello_hs
 
