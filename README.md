@@ -10,6 +10,12 @@ $ ./build
 
 ## Benchmarking
 
+First, install `hey` (a reasonable alternative to Apache Bench):
+
+```sh-session
+$ go get -u github.com/rakyll/hey
+```
+
 ```sh-session
 $ hey -cpus 2 -c 10 -n 100000 -H 'Accept-Encoding: gzip, deflate' http://localhost:4567/ # Ruby/Sinatra
 $ hey -cpus 2 -c 10 -n 100000 -H 'Accept-Encoding: gzip, deflate' http://localhost:8000/ # Go
