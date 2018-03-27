@@ -21,9 +21,9 @@ $ brew install go
 
 Build:
 
-$ go build hello_go.go
+$ go build hello.go
 
 Run:
 
-$ ./hello_go
+$ ./hello
 */

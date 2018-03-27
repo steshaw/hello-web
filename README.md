@@ -20,6 +20,7 @@ $ go get -u github.com/rakyll/hey
 $ hey -cpus 2 -c 10 -n 100000 -H 'Accept-Encoding: gzip, deflate' http://localhost:4567/ # Ruby/Sinatra
 $ hey -cpus 2 -c 10 -n 100000 -H 'Accept-Encoding: gzip, deflate' http://localhost:8000/ # Go
 $ hey -cpus 2 -c 10 -n 100000 -H 'Accept-Encoding: gzip, deflate' http://127.0.0.1:3000/ # Haskell/Scotty
+$ hey -cpus 2 -c 10 -n 100000 -H 'Accept-Encoding: gzip, deflate' http://127.0.0.1:8080/ # Haskell/Servant
 ```
 
 ### Ruby
@@ -50,7 +51,7 @@ Summary:
   Size/request:	13 bytes
 ```
 
-### Haskell
+### Haskell/Scotty
 
 ```
 Summary:
@@ -59,4 +60,15 @@ Summary:
   Fastest:	0.0001 secs
   Average:	0.0004 secs
   Requests/sec:	22668.7974
+```
+
+### Haskell/Servant
+
+```
+Summary:
+  Total:	5.9051 secs
+  Slowest:	0.0052 secs
+  Fastest:	0.0001 secs
+  Average:	0.0006 secs
+  Requests/sec:	16934.5494
 ```

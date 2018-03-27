@@ -10,8 +10,13 @@ bundle install
 
 # Build Go[lang].
 brew install go
-go build hello_go.go
+go build hello.go
 
-# Build Haskell.
+# Install Haskell Stack.
 brew install haskell-stack
-stack exec --package scotty -- ghc --make hello_hs.hs
+
+# Build Haskell/Scotty.
+stack exec --package scotty -- ghc -Wall -O2 --make hello_scotty.hs
+
+# Build Haskell/Servant.
+stack exec --package http-client --package servant --package servant-server -- ghc -Wall -O2 --make hello_servant.hs
